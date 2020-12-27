@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+<h1>CHRISTMAS PROJECT</h1>
+
+<div class="grid-libros">
+    <div *ngFor="let libro of libros">
+        <div class="item-libro">
+            <img class="item-libro-imagen" src="{{libro.imagen}}">
+            <h5>{{libro.titulo}}</h5>
+            <p>{{libro.autor}}</p>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary boton-ver-mas" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-primary boton-ver-mas" type="button" disabled>
+    <span>+</span>
+</button>
