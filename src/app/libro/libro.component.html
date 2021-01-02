@@ -1,2 +1,28 @@
 <app-menu></app-menu>
-<p>libro works!</p>
+<div class="content">
+
+    <h1>{{libro.titulo}}</h1>
+    <h3>{{libro.autor}}</h3>
+
+    <div class="info-libro">
+        <div class="imagen-libro">
+            <img src="{{libro.imagen}}"/>
+        </div>
+        <div>
+            <p>Descripción: {{libro.descripcion}}</p>
+            <p>Categorías: </p>
+            <ul>
+                <li *ngFor="let categoria of categorias">{{categoria.nombre}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="comentarios-libro">
+        <h3>Comentarios:</h3>
+        <div class="comentario" *ngFor="let comentario of comentarios">
+            <p class="autor-comentario">{{comentario.usuario.nombre}} {{comentario.usuario.apellidos}}</p>
+            <p>{{comentario.comentario}}</p>
+        </div>
+        <p *ngIf="!isUltimaPaginaComentarios" (click)="mostarMasComentarios()">Mostrar más comentarios</p>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin: 5% 0;
+}
+
+.tbl-categorias{
+    width: 60%;
+    margin-bottom: 2%;
+}
+
+.btn-crear-categoria{
+    margin-bottom: 5%;
+}
+
+.icono-accion{
+    margin: 0 5%;
+}
